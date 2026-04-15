@@ -8,6 +8,3 @@ class Producto:
   def __str__(self):
       return f"el id del producto es: {self.id} - el nombre del producto es: {self.nombre} - su categoria es: {self.categoria} - su precio es: {self.precio}"
   
-producto1 = Producto(1,"computador", "tecnologia", 1000000)
-
-print(producto1)

@@ -15,17 +15,27 @@ class Catalogo:
         for producto in self.productos:
             print(producto)
 
-    def eliminar_producto(self, id ):
-        pass
+    def buscar_por_id(self):
+         for in p in self.productos:
+            if p.id == id:
+                print(p)
+                return p
+
+    def eliminar_producto(self, id):
+        buscar = self.buscar_por_id(id)
+        self.productos.remove(p)
+
+    def guardar_catalogo(self, nombre_archivo="catalogo.txt"):
+        try
+            with open(nombre_archivo,"w") as f:
+                for p in self.productos:
+                    f.write(f"{p.id},{p.nombre},{p.categoria},{p.precio}\n")
+        except Exception as error:
+            print(f"error en el archivo: {error}")
+
+
+
+tupla = ()
+tupla.
 
         
-
-
-p = Producto(1,"computador", "tecnologia", 1000000)
-catalogo = Catalogo()
-catalogo.agregar_producto(p)
-catalogo.agregar_producto(p)
-catalogo.agregar_producto(p)
-catalogo.agregar_producto(p)
-catalogo.listar_catalogo()
-
